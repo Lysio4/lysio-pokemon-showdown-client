@@ -558,8 +558,6 @@ process.stdout.write("Building `data/teambuilder-tables.js`... ");
 			BattleTeambuilderTable['gen9agoldenexperience'].formatSlices = formatSlices;
 			BattleTeambuilderTable['gen9agoldenexperience'].items = items;
 			BattleTeambuilderTable['gen9agoldenexperience'].learnsets = {};
-			BattleTeambuilderTable['gen9agoldenexperience'].moves = moves;
-			BattleTeambuilderTable['gen9agoldenexperience'].abilities = abilities;
 		} else if (gen === 'gen9') {
 			BattleTeambuilderTable.tiers = tiers;
 			BattleTeambuilderTable.items = items;
