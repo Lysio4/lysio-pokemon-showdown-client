@@ -870,7 +870,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			this.format.startsWith('battlespot') ||
 			this.format.startsWith('battlestadium') ||
 			this.format.startsWith('battlefestival') ||
-			(this.dex.gen === 9 && this.formatType !== 'natdex' && this.formatType !== 'legendsza' && this.formatType !== 'gen9agoldenexperience' && this.formatType !== 'toho')
+			(this.dex.gen === 9 && this.formatType !== 'natdex' && this.formatType !== 'legendsza')
 		) {
 			if (gen === 9) {
 				genChar = 'a';
@@ -1764,7 +1764,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		const isTradebacks = format.includes('tradebacks');
 		const regionBornLegality = dex.gen >= 6 &&
 			(/^battle(spot|stadium|festival)/.test(format) || format.startsWith('bss') ||
-				format.startsWith('vgc') || (dex.gen === 9 && this.formatType !== 'natdex' && this.formatType !== 'legendsza'));
+				format.startsWith('vgc') || (dex.gen === 9 && this.formatType !== 'natdex' && this.formatType !== 'legendsza' && this.formatType !== 'agoldenexperience' && this.formatType !== 'toho'));
 
 		let learnsetid = this.firstLearnsetid(species.id);
 		let moves: string[] = [];
@@ -1852,8 +1852,8 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 					if (!(dex.gen < 8 || this.formatType === 'natdex') && move.isZ) continue;
 					if (typeof move.isMax === 'string') continue;
 					if (move.isMax && dex.gen > 8) continue;
-					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex') continue;
-					if (move.isNonstandard === 'LGPE' && this.formatType !== 'letsgo') continue;
+					if (move.isNonstandard === 'Past' && this.formatType !== 'natdex' && this.formatType !== 'agoldenexperience') continue;
+					if (move.isNonstandard === 'LGPE' && this.formatType !== 'letsgo' && this.formatType !== 'agoldenexperience') continue;
 					moves.push(move.id);
 				}
 			}
