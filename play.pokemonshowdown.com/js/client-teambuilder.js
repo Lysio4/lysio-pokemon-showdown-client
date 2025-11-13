@@ -36,8 +36,8 @@
 				if (this.curTeam.format.includes('toho')) {
 					this.curTeam.dex = Dex.mod('toho');
 				}
-				if (this.curTeam.format.includes('agoldenexperience')) {
-					this.curTeam.dex = Dex.mod('agoldenexperience');
+				if (this.curTeam.format.includes('gen9agoldenexperience')) {
+					this.curTeam.dex = Dex.mod('gen9agoldenexperience');
 				}
 				Storage.activeSetList = this.curSetList;
 			}
@@ -770,8 +770,8 @@
 			if (this.curTeam.format.includes('toho')) {
 				this.curTeam.dex = Dex.mod('toho');
 			}
-			if (this.curTeam.format.includes('agoldenexperience')) {
-				this.curTeam.dex = Dex.mod('agoldenexperience');
+			if (this.curTeam.format.includes('gen9agoldenexperience')) {
+				this.curTeam.dex = Dex.mod('gen9agoldenexperience');
 			}
 			Storage.activeSetList = this.curSetList = Storage.unpackTeam(this.curTeam.team);
 			this.curTeamIndex = i;
@@ -1632,8 +1632,8 @@
 			if (this.curTeam.format.includes('toho')) {
 				this.curTeam.dex = Dex.mod('toho');
 			}
-			if (this.curTeam.format.includes('agoldenexperience')) {
-				this.curTeam.dex = Dex.mod('agoldenexperience');
+			if (this.curTeam.format.includes('gen9agoldenexperience')) {
+				this.curTeam.dex = Dex.mod('gen9agoldenexperience');
 			}
 			this.save();
 			if (this.curTeam.gen === 5 && !Dex.loadedSpriteData['bw']) Dex.loadSpriteData('bw');
