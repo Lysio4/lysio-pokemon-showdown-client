@@ -20,7 +20,7 @@ Config.whitelist = [
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'showdown',
-	host: 'showdown.lysio.ovh',
+	host: 'api.showdown.lysio.ovh',
 	port: 443,
 	httpport: 80,
 	altport: 80,
