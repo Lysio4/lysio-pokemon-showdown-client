@@ -1171,7 +1171,7 @@ class BattlePokemonSearch extends BattleTypedSearch<'pokemon'> {
 			tierSet = tierSet = tierSet.slice(slices.NU || slices.RU || slices.UU);
 		} else if (this.formatType === 'gen9agoldenexperiencepu') {
 			tierSet = tierSet.slice(slices.PU || slices.NU);
-		else if (format === 'toho' || format.includes('toho')) {
+		} else if (format === 'toho' || format.includes('toho')) {
 			tierSet = tierSet.slice(0, slices.AG || slices.Uber).concat(tierSet.slice(slices.OU));
 		} else if (!isDoublesOrBS) {
 			tierSet = [
